@@ -4,8 +4,8 @@ Plugin Name: Gruber Markdown
 Plugin URI: https://github.com/verynub/wp-gruber-markdown
 Description: Automatically convert markdown content to html page
 Version: 1.0
-Author: Verynub
-Author URI: http://blog.mumu.chat
+Author: Neo
+Author URI: http://blog.iflappy.com
 License: Apache License Version 2.0
 */
 
@@ -29,12 +29,12 @@ class GruberMarkdown
 		/* 禁止文章可视化编辑 */
 		add_filter( 'user_can_richedit','__return_false' );
 
-
 		// add_filter( 'the_title',  array($this, 'the_title') );
 
 		/* 将markdown文章转换为html */
 		add_filter( 'the_content',  array($this, 'the_content') );
 		add_action( 'wp_enqueue_scripts',  array($this, 'wp_enqueue_scripts') ); 
+		add_action( 'get_footer', array($this, 'get_footer') );
 
 		if( is_admin() ) {
 		    /*  利用 admin_menu 钩子，添加菜单 */
@@ -42,14 +42,36 @@ class GruberMarkdown
 		}
 	}
 
+	function get_footer(){
+		?>
+			 <script type="text/javascript">
+				var pre = document.getElementsByTagName('pre');
+				for (var i=0;i<pre.length;i++)
+				{
+					pre[i].className = "prettyprint";
+				}
+				// var b = document.getElementsByTagName('body');
+				// b.onload="prettyPrint()";
+				prettyPrint();
+			</script> 
+		<?php
+	}
+	
+
 	function wp_enqueue_scripts() {
 		$opt = new GruberMarkdownOption;
 		$opt->revise_font_size();
-		$css = $this->revise == 0 ? '/css/gruber_markdown.css' : '/css/gruber_markdown.css?t='.time();
+		$css = $this->revise == 0 ? 'gruber_markdown.css' : 'gruber_markdown.css?t='.time();
 		wp_register_style('gruber-markdown', plugins_url($css, __FILE__));
-		wp_register_script('code-prettify', plugins_url('/js/code-prettify.js', __FILE__));
 		wp_enqueue_style('gruber-markdown');
-		wp_enqueue_script('code-prettify');
+
+		$prettify_js = 'prettify.js' ;
+		wp_register_script('google-code-prettify-js', plugins_url($prettify_js, __FILE__));
+		wp_enqueue_script('google-code-prettify-js');
+
+		$prettify_css = 'prettify.css' ;
+		wp_register_style('google-code-prettify-css', plugins_url($prettify_css, __FILE__));
+		wp_enqueue_style('google-code-prettify-css');
 	}
 
 	function the_title( $title ) {
@@ -102,8 +124,8 @@ class GruberMarkdownOption
 			update_option('gruber-markdown-revise', '0');
 		}
 
-		$bac_path = dirname(__FILE__) . '/css/gruber_markdown.css.' . $this->unit;
-		$css_path = dirname(__FILE__) . '/css/gruber_markdown.css';
+		$bac_path = dirname(__FILE__) . '/gruber_markdown.css.' . $this->unit;
+		$css_path = dirname(__FILE__) . '/gruber_markdown.css';
 
 		if(file_exists($css_path) && $this->revise == 0)
 			return;

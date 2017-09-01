@@ -8,10 +8,8 @@
 
 	$opt = new GruberMarkdownOption;
 	$opt->revise_font_size();
-	wp_register_style('gruber-markdown', plugins_url('css/gruber_markdown.css?t='. time(), __FILE__));
-	wp_register_script('code-prettify', plugins_url('/js/code-prettify.js', __FILE__));
+	wp_register_style('gruber-markdown', plugins_url('gruber_markdown.css?t='. time(), __FILE__));
 	wp_enqueue_style('gruber-markdown');
-	wp_enqueue_script('code-prettify');
 ?>
 
 <div class="gruber-markdown" style="width:72%; backgrounds:#ffffff;">

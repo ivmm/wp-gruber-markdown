@@ -87,41 +87,44 @@
 }
 
 .gruber-markdown p code{
-	color:#3F3A33;
-	background-color:#FEE9CC;
-	font-family:"Microsoft Yahei";
-	font-style:normal;
-	font-weight:normal;
-	font-size:.96em;
-	letter-spacing:0px;
-	line-height:150%;
-	padding-left:.4em; padding-right:.4em; padding-top:.1em; padding-bottom:.1em;
-	-webkit-border-radius:4px;
-	border-radius:4px;
-	text-indent:0px;
+	color:#3F3A33!important;
+	background-color:#FEE9CC!important;
+	font-family:"Microsoft Yahei"!important;
+	font-style:normal!important;
+	font-weight:normal!important;
+	font-size:.96em!important;
+	letter-spacing:0px!important;
+	line-height:150%!important;
+	padding-left:.4em!important; 
+	padding-right:.4em!important; 
+	padding-top:.1em!important; 
+	padding-bottom:.1em!important;
+	-webkit-border-radius:4px!important;
+	border-radius:4px!important;
+	text-indent:0px!important;
 }
 
 .gruber-markdown pre{
-	background-color:#FCFCFC;
-	padding:.96em;
-	border:2px solid #E4E2E2;
-	-webkit-border-radius:5px;
-	border-radius:5px;
-	text-indent:0px;
-	white-space: pre-wrap;
+	background-color:#FCFCFC!important;
+	padding:.96em!important;
+	border:2px solid #E4E2E2!important;
+	-webkit-border-radius:5px!important;
+	border-radius:5px!important;
+	text-indent:0px!important;
+	white-space: pre-wrap!important;
 }
 
 .gruber-markdown pre code{
-	color:#777777;
-	background-color:#FCFCFC;
-	color:#505050;
-	font-family: "Courier New", Courier, "Andale Mono", "Microsoft Yahei";
-	font-style:normal;
-	font-weight:normal;
-	font-size:.96em;
-	letter-spacing:0px;
-	line-height:150%;
-	text-indent:0px;
+	color:#777777!important;
+	background-color:#FCFCFC!important;
+	color:#505050!important;
+	font-family: "Courier New", Courier, "Andale Mono", "Microsoft Yahei"!important;
+	font-style:normal!important;
+	font-weight:normal!important;
+	font-size:.96em!important;
+	letter-spacing:0px!important;
+	line-height:150%!important;
+	text-indent:0px!important;
 }
 
 .gruber-markdown table{

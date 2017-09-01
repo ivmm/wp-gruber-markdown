@@ -87,28 +87,31 @@
 }
 
 .gruber-markdown p code{
-	color:#3F3A33;
-	background-color:#FEE9CC;
-	font-family:"Microsoft Yahei";
-	font-style:normal;
-	font-weight:normal;
-	font-size:15.36px;
-	letter-spacing:0px;
-	line-height:150%;
-	padding-left:6.144px; padding-right:6.144px; padding-top:1.536px; padding-bottom:1.536px;
-	-webkit-border-radius:4px;
-	border-radius:4px;
-	text-indent:0px;
+	color:#3F3A33!important;
+	background-color:#FEE9CC!important;
+	font-family:"Microsoft Yahei"!important;
+	font-style:normal!important;
+	font-weight:normal!important;
+	font-size:15.36px!important;
+	letter-spacing:0px!important;
+	line-height:150%!important;
+	padding-left:6.144px!important; 
+	padding-right:6.144px!important; 
+	padding-top:1.536px!important; 
+	padding-bottom:1.536px!important;
+	-webkit-border-radius:4px!important;
+	border-radius:4px!important;
+	text-indent:0px!important;
 }
 
 .gruber-markdown pre{
-	background-color:#FCFCFC;
-	padding:14.7456px;
-	border:2px solid #E4E2E2;
-	-webkit-border-radius:5px;
-	border-radius:5px;
-	text-indent:0px;
-	white-space: pre-wrap;
+	background-color:#FCFCFC!important;
+	padding:14.7456px!important;
+	border:2px solid #E4E2E2!important;
+	-webkit-border-radius:5px!important;
+	border-radius:5px!important;
+	text-indent:0px!important;
+	white-space: pre-wrap!important;
 }
 
 .gruber-markdown pre code{
