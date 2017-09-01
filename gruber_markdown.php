@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Gruber Markdown
-Plugin URI: https://github.com/verynub/wp-gruber-markdown
+Plugin URI: https://github.com/flyhttp/wp-gruber-markdown
 Description: Automatically convert markdown content to html page
 Version: 1.0
 Author: Neo
