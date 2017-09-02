@@ -87,8 +87,6 @@
 }
 
 .gruber-markdown p code{
-	color:#3F3A33!important;
-	background-color:#FEE9CC!important;
 	font-family:"Microsoft Yahei"!important;
 	font-style:normal!important;
 	font-weight:normal!important;
@@ -105,7 +103,6 @@
 }
 
 .gruber-markdown pre{
-	background-color:#FCFCFC!important;
 	padding:14.7456px!important;
 	border:2px solid #E4E2E2!important;
 	-webkit-border-radius:5px!important;
@@ -115,15 +112,13 @@
 }
 
 .gruber-markdown pre code{
-	background-color:#FCFCFC;
-	color:#505050;
-	font-family: "Courier New", Courier, "Andale Mono", "Microsoft Yahei";
-	font-style:normal;
-	font-weight:normal;
-	font-size:15.36px;
-	letter-spacing:0px;
-	line-height:150%;
-	text-indent:0px;
+	font-family: "Courier New", Courier, "Andale Mono", "Microsoft Yahei"!important;
+	font-style:normal!important;
+	font-weight:normal!important;
+	font-size:15.36px!important;
+	letter-spacing:0px!important;
+	line-height:150%!important;
+	text-indent:0px!important;
 }
 
 .gruber-markdown table{

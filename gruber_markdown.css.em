@@ -87,8 +87,6 @@
 }
 
 .gruber-markdown p code{
-	color:#3F3A33!important;
-	background-color:#FEE9CC!important;
 	font-family:"Microsoft Yahei"!important;
 	font-style:normal!important;
 	font-weight:normal!important;
@@ -105,7 +103,6 @@
 }
 
 .gruber-markdown pre{
-	background-color:#FCFCFC!important;
 	padding:.96em!important;
 	border:2px solid #E4E2E2!important;
 	-webkit-border-radius:5px!important;
@@ -115,8 +112,6 @@
 }
 
 .gruber-markdown pre code{
-	color:#777777!important;
-	background-color:#FCFCFC!important;
 	color:#505050!important;
 	font-family: "Courier New", Courier, "Andale Mono", "Microsoft Yahei"!important;
 	font-style:normal!important;

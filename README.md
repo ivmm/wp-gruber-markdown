@@ -18,6 +18,10 @@
 
 由于在某些WordPress主题下会显得字体或大或小，所以添加了调整字体大小的设置。
 
-3. 语法高亮
+3. 代码高亮
 
 集成 [google-code-prettify](https://github.com/google/code-prettify)，高亮显示代码。
+
+4. 代码高亮主题
+
+集成[color-themes-for-google-code-prettify](https://jmblog.github.io/color-themes-for-google-code-prettify/)，可切换主题

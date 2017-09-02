@@ -56,7 +56,6 @@ class GruberMarkdown
 			</script> 
 		<?php
 	}
-	
 
 	function wp_enqueue_scripts() {
 		$opt = new GruberMarkdownOption;
@@ -69,7 +68,12 @@ class GruberMarkdown
 		wp_register_script('google-code-prettify-js', plugins_url($prettify_js, __FILE__));
 		wp_enqueue_script('google-code-prettify-js');
 
-		$prettify_css = 'prettify.css' ;
+		$prettify_css = get_option('gruber-markdown-theme');
+		if ($prettify_css == 'default' || $prettify_css == ''){
+			$prettify_css = 'prettify.css';
+		}else{
+			$prettify_css = 'theme/' . $prettify_css . '.min.css';
+		}
 		wp_register_style('google-code-prettify-css', plugins_url($prettify_css, __FILE__));
 		wp_enqueue_style('google-code-prettify-css');
 	}
@@ -100,13 +104,16 @@ class GruberMarkdownOption
 	var $ratio;
 	var $revise;
 	var $unit;
+	var $theme;
 	
 	function __construct($unit = 'px')
 	{
 		$this->unit = $unit;
+		$this->theme = 'default';
 	}
 
-	function revise_font_size() {
+	function revise_font_size() 
+	{
 		$ratio = get_option('gruber-markdown-ratio');
 		$revise = get_option('gruber-markdown-revise');
 		if($ratio == null || '' === $ratio) {

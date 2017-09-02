@@ -6,6 +6,11 @@
 		update_option('gruber-markdown-revise', '1');
 	}
 
+	if( isset($_POST['theme']) ) {
+		$theme = $_POST['theme'];
+		update_option('gruber-markdown-theme', $theme);
+	}
+
 	$opt = new GruberMarkdownOption;
 	$opt->revise_font_size();
 	wp_register_style('gruber-markdown', plugins_url('gruber_markdown.css?t='. time(), __FILE__));
@@ -15,8 +20,38 @@
 <div class="gruber-markdown" style="width:72%; backgrounds:#ffffff;">
 	<div>
 		<h1>Gruber Markdown for WordPress</h1>
-		<form action="<?php echo admin_url( 'admin.php?page=' . plugin_basename( __FILE__ ) ); ?>" 
+		<form id='gruber-form' action="<?php echo admin_url( 'admin.php?page=' . plugin_basename( __FILE__ ) ); ?>" 
 				method="post" novalidate="novalidate">
+			<p>代码高亮主题
+				<select name="theme" id="theme" form="gruber-form">
+				<?php
+				$themedir = dirname(__FILE__) . '/theme';
+				$theme = get_option('gruber-markdown-theme');
+
+				if ($theme == 'default'){
+					echo '<option value="default" selected="selected">default</option>';
+				}else{
+					echo '<option value="default">default</option>';
+				}
+
+				if (is_dir($themedir)) {   
+					if ($dh = opendir($themedir)) {   
+						while (($file = readdir($dh)) !== false) {   
+							if ($file!="." && $file!="..") { 
+								$file = explode('.', $file)[0];
+								if ($file != $theme) {
+									echo '<option value="'.$file.'">'.$file.'</option>';   
+								}else{
+									echo '<option value="'.$file.'" selected="selected">'.$file.'</option>';  
+								}
+							}   
+						}   
+						closedir($dh);   
+					}   
+				}   
+				?>
+				</select>
+			</p>
 			<p>
 				<strong>字体显示比例：</strong>
 				<input type="text" name="ratio" 
