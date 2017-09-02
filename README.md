@@ -25,3 +25,7 @@
 4. 代码高亮主题
 
 集成[color-themes-for-google-code-prettify](https://jmblog.github.io/color-themes-for-google-code-prettify/)，可切换主题
+
+### 效果预览
+
+![](https://raw.githubusercontent.com/flyhttp/wp-gruber-markdown/master/screenshot-1.png)
