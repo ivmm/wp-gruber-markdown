@@ -59,8 +59,10 @@
 							 style="margin:1em 1em;"/>
 				填写大于0的小数，默认是1.0
 			</p>
-			<p>如果设置不起作用，可能是您的wordpress权限不够，可以尝试以下命令.</p><pre><code>chmod -R 755 wordpress
-chown -R www-data.www-data wordpress</code></pre>
+			<p>如果设置不起作用，可能是您的wordpress权限不够，可以尝试以下命令.</p>
+<pre style="background-color:#FCFCFC;color:#505050;"><code style="background-color:#FCFCFC;color:#505050;">chmod -R 755 wordpress
+chown -R www-data.www-data wordpress
+</code></pre>
 
 			<p class="submit"><input type="submit" class="button-primary" value="保存设置" /></p>
 		</form>
@@ -68,7 +70,7 @@ chown -R www-data.www-data wordpress</code></pre>
 	<div>
 		<h2>预览效果</h2>
 		<h3>Markdown原文</h3>
-		<pre><code><?php
+		<pre style="background-color:#FCFCFC;color:#505050;"><code style="background-color:#FCFCFC;color:#505050;"><?php
 $text = "# Markdown——从入门到精通
 #### 导语：
 >[Markdown](http://zh.wikipedia.org/wiki/Markdown) 是一种轻量级的「标记语言」，它的优点很多，目前也被越来越多的写作爱好者，撰稿者广泛使用。看到这里请不要被「标记」、「语言」所迷惑，Markdown 的语法十分简单。常用的标记符号也不超过十个，这种相对于更为复杂的HTML 标记语言来说，Markdown 可谓是十分轻量的，学习成本也不需要太多，且一旦熟悉这种语法规则，会有一劳永逸的效果。
