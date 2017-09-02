@@ -34,21 +34,17 @@
 					echo '<option value="default">default</option>';
 				}
 
-				if (is_dir($themedir)) {   
-					if ($dh = opendir($themedir)) {   
-						while (($file = readdir($dh)) !== false) {   
-							if ($file!="." && $file!="..") { 
-								$file = explode('.', $file)[0];
-								if ($file != $theme) {
-									echo '<option value="'.$file.'">'.$file.'</option>';   
-								}else{
-									echo '<option value="'.$file.'" selected="selected">'.$file.'</option>';  
-								}
-							}   
-						}   
-						closedir($dh);   
-					}   
-				}   
+				$cdir = scandir($themedir);
+				foreach ($cdir as $key => $value) {
+					if (!in_array($value,array(".",".."))) {
+						$file = explode('.', $value)[0];
+						if ($file != $theme) {
+							echo '<option value="'.$file.'">'.$file.'</option>';   
+						}else{
+							echo '<option value="'.$file.'" selected="selected">'.$file.'</option>';  
+						}
+					}
+				}
 				?>
 				</select>
 			</p>
