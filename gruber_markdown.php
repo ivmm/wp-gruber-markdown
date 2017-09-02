@@ -3,7 +3,7 @@
 Plugin Name: Gruber Markdown
 Plugin URI: https://github.com/flyhttp/wp-gruber-markdown
 Description: Automatically convert markdown content to html page
-Version: 1.0
+Version: 0.2.0
 Author: Neo
 Author URI: http://blog.iflappy.com
 License: Apache License Version 2.0
