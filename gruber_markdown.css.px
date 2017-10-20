@@ -112,7 +112,7 @@
 }
 
 .gruber-markdown pre code{
-	font-family: "Courier New", Courier, "Andale Mono", "Microsoft Yahei"!important;
+	font-family: Courier, "Andale Mono", "Microsoft Yahei"!important;
 	font-style:normal!important;
 	font-weight:normal!important;
 	font-size:15.36px!important;
